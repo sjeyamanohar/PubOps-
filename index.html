@@ -1,0 +1,484 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Pubops- by sjeyamanohar</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Pubops-</h1>
+        <p class="header"></p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/sjeyamanohar/PubOps-/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/sjeyamanohar/PubOps-/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/sjeyamanohar/PubOps-">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/sjeyamanohar">sjeyamanohar</a></p>
+
+
+      </header>
+      <section>
+        <p>Titles &amp; Subtitles
+The  tag should only include the title. Titles are displayed on our site as they are submitted in the . There are separate tags for subtitle, series information, edition, and author name - proper use of tags means better discovery on our site. </p>
+
+<p>Best Practices for Title and Subtitle
+• Don't include series information in the title - that's what the  or  composites are for!
+• Use the  tag instead of including the subtitle as part of the main title
+• Don't invert titles so that articles are at the end. (e.g. Shark in the Park, The.)
+• Don't include the author's name in the title.
+• Title and Subtitle have a limit of 250 characters each, including spaces.
+ONIX 2.1</p>
+
+<p></p>
+01
+The Shark In The Park
+Left Shark's Park Lark
+
+
+<p>ONIX 3.0</p>
+
+<p>
+01
+
+01
+The
+Shark In The Park
+Left Shark's Park Lark
+
+</p>
+
+<p>Publishing Status </p>
+
+<p>ONIX</p>
+
+<p>Publishing Status is a simple yet powerful tag in ONIX: it is the composite that can activate or deactivate a title without manual intervention.</p>
+
+<p>At Kobo, a value of 02 (Forthcoming) or 04 (Active) will activate a title, provided that its Activation Date is in the past. Any other value will deactivate the title (remove the title from sale), so we encourage you to review and update your catalogue, paying special attention to any titles with value 00 (Unspecified).</p>
+
+<p>It’s important to note that Publishing Status is required in ONIX 3.0. And while it’s not required in ONIX 2.1 it is considered the best practice to include it.</p>
+
+<p>04
+or
+04</p>
+
+<p>Excel</p>
+
+<p>In our excel template, we use column A: Publishing Status. A title will be available for sale or preorder by using the value active. To remove your title from sale, simply use the value deactivated.</p>
+
+<p>Category Codes</p>
+
+<p>A subject category code from the scheme identified (BISAC, BIC, etc) will help catalogue your ebooks. Category codes help discoverability on site because your chosen codes correspond to our category stores. In addition to identifying a main subject please include additional subject codes with increasing precision so your target audience will find your books.</p>
+
+<p>Best Practices for Category Codes:
+ • Kobo requires a main subject code for each title. We recommend using three codes to improve discoverability.
+ • Kobo only supports BISAC, BIC, CULTURA, and CLIL categories codes. (Please note that the CLIL codes are accepted but mapped to BISAC via our system).
+ • Choose the most specific categories which correspond to your ebooks. The more accurate categories will be the best. Please don’t use generic category codes (e.g. LCO000000 -&gt; LITERARY COLLECTIONS / General, instead of a more accurate code such as LCO008020 LITERARY COLLECTIONS / European / French).
+ • Kobo accepts and stores keywords but does not use them currently for classification. 
+ • Do not mix fiction and non-fiction codes otherwise the metadata will be rejected by our system. 
+ • Do not use mix kids and adults category codes, otherwise metadata will be rejected by our system. Our system will reject all metadata with both Kids (JUV and JNF categories) and Adult content or category for an ebook.
+ • KIDS STORE: For Kids Store, Juvenile BISAC or BIC codes – JUV or JNF bisac codes, and Y- BIC codes are required.</p>
+
+<p>ONIX 2.1 Reference name: 
+BISAC 
+JNF001000 
+ 
+10 JNF028000 
+</p>
+
+<p>BIC 
+ YNU</p>
+
+<p>ONIX 2.1 Short tags 
+BISAC
+ 
+ 
+10 
+JNF001100​ 
+ 
+
+10
+ JNF028020 
+ </p>
+
+<p>BIC
+ YNU</p>
+
+<p>ONIX 3.0 Reference name: 
+ 
+ 
+10 
+ JNF001000 
+ 
+ 
+10 
+JNF028020 
+</p>
+
+<p>ONIX 3.0 short tags:
+
+ 
+10
+JNF001100​
+ 
+ 
+10
+JNF028020
+</p>
+
+<p>NOTE : We only support BISAC, CULTURA, BIC and CLIL.
+'10': 'BISAC',
+'12': 'BIC',
+'20': 'Keywords',
+'29': 'CLIL',
+'78': 'C_CODE',
+If code is ‘24’ we use what is in </p>
+
+<p>Useful links: 
+ • BISAC category codes : <a href="https://www.bisg.org/complete-bisac-subject-headings-2014-edition">https://www.bisg.org/complete-bisac-subject-headings-2014-edition</a>
+ • For all BIC subject codes and qualifiers, see <a href="http://www.bic.org.uk/7/BIC-Standard-Subject-Categories/">http://www.bic.org.uk/7/BIC-Standard-Subject-Categories/</a>
+ • ONIX Code Lists Issue 27 - Subject scheme identifier code :  <a href="http://home.bic-media.com/onix_info/2-1-4/codelists/onix-codelist-27.htm">http://home.bic-media.com/onix_info/2-1-4/codelists/onix-codelist-27.htm</a></p>
+
+<p>Be Aware of Your Dates! 
+Dates matter! This is one of the most important pieces of information to be included in your metadata in order to be sure your titles will be on sale at the right time. You can manage preorders and promotions by effectively using date composites.
+Best practices: 
+Publication Date
+Your eBook's publication date is what appears on the product/item page on the Kobo store. It is a display value only and does not trigger sales.<br>
+If no publication date is included, the default date is set to December 2009. 
+On Sale Date/Embargo date
+The On Sale Date is when your title is made active on site. If your book is available for preorder, it is the date it goes from preorder to regular sale. This is also the date the epub will be available for download to customer libraries.
+If a Publication Date set in the future is provided but an On Sale Date is missing, the default On Sale Date will match the Publication Date. If the Publication Date is set in the past or is missing, the default On Sale Date will be the date metadata is loaded.
+*In ONIX 3.0 the Embargo Date should be used as the On Sale Date field is deprecated. 
+Announcement date
+The date when a new product may be announced to the general public, typically triggering pre-order status.
+Kobo reads and stores this tag but the functionality is not yet supported. You can still send metadata as it will be stored until we support this date field.
+Dates in price composites (applies to ONIX metadata only)
+Price Effective Date composites allow you to schedule promotional prices with your ONIX feed. 
+Some best practices include:
+Your starting regular price must have an end date. Otherwise, our system won’t know to look for a new price.
+The promo price must have both a start and end date.
+Your regular price is reinstated by including a new start date. All dates are inclusive: they start at 0:00 EST and end at 23:59 EST of the specified date.
+Tags: 
+Publication Date
+ONIX 2.1
+Reference name: 
+20130315
+Short tag: 
+20130315
+ONIX 3.0 
+Reference name:
+
+01
+20150919
+<br>
+Short tag:
+
+01
+20150919
+
+Excel
+Publication Date: 2015-09-19</p>
+
+<p>On Sale Date/Embargo date
+ONIX 2.1 (On Sale Date)
+Reference name:
+20150219
+Short tag:
+20150219
+ONIX 3.0 (Embargo Date):
+Reference name: 
+
+02
+20150219
+ 
+Short tag:
+ 
+02 
+20150219
+
+Excel 
+OnSale Date: 2015-02-19</p>
+
+<p>Announcement date
+ONIX 3.0
+Reference name: 
+
+09
+20150219
+ 
+Short tag:
+ 
+09 
+20150219
+
+Excel
+Announcement Date: 2015-02-19
+Price Effective Dates [ONIX only] 
+ONIX 2.1 example (with embedded notes for clarification):
+
+41
+7.99
+USD
+20151222
+
+--- the above price will end at 23:59 EST on Dec 22
+
+41
+3.99
+USD
+20151223
+20151230
+
+--- the promo price starts at 0:00 EST Dec 23 and ends 23:59 EST Dec 30
+
+41
+7.99
+USD
+ 20151231
+
+--- the regular price is reinstated at 0:00 EST Dec 31
+Onix 3.0 uses the PriceDateRole tags where PriceDateRole 14 = From Date and PriceDateRole 15 = Until Date</p>
+
+<p>
+01
+10.00
+USD
+
+15
+20151221
+
+
+--- the above price will end at 23:59 EST on Dec 21
+
+01
+8.00
+USD
+
+14
+20151222
+
+
+15
+20151230
+
+
+--- the promo price starts at 0:00 EST on Dec 22 and ends 23:59 EST Dec 30
+
+01
+10.00
+USD
+
+14
+20151231 
+
+--- the regular price is reinstated at 0:00 EST on Dec 31</p>
+
+<p>Best Practices for Audience Ranges</p>
+
+<p>Audience Range indicates the intended audience or readership age for a product. You may send a minimum age (“From”), a maximum age (“To”) or a range (“From” and “To”). Kobo uses an Audience Range Qualifier of 17 (Interest Age) and an age range between 0-17 to determine eligibility for our Kids’ Store. While Age Range is not required in ONIX 3.0 or ONIX 2.1 it is the best practice to include it. </p>
+
+<p>Common Errors: 
+Representing a number with a text value (e.g. "sixteen" rather than "16”). 
+Adding characters that are not numbers (e.g. "18+" or “18 and up” rather than "18").</p>
+
+<p>Onix 2.1 and 3.0 Composite</p>
+
+<p>For example, the following composite tells us that this title is for Interest Ages 8-12:</p>
+
+<p> 
+17 
+03 {Indicates “from”}
+8 {Indicates minimum age}
+04 {Indicates “to”}
+12 {Indicates maximum age}
+</p>
+
+<p>This example tells us this title is for Interest Ages 6+:
+ 
+17 03 6 
+</p>
+
+<p>Prices and Price Type Codes 
+ONIX Publishers and Price Type Codes
+When sending multiple prices for your books, it’s important to use the correct price type code in order for prices to display properly in each territory. Price type codes specify the type of price submitted (e.g. agency, wholesale, IPP) and indicates if the price includes or excludes tax.</p>
+
+<p>The field is  in ONIX 2.1 and  in ONIX 3.0.
+Prices without tax included (CA and US)
+01 – Wholesale prices in Canada and the US, without tax included
+41 – Agency prices in Canada and the US, without tax included
+03 – IPP prices in Canada and the US, without tax included
+Prices with tax included (EU, UK, and AU)
+02 – Wholesale prices in the EU, UK, and AU, with tax included
+42 – Agency prices in the EU, UK, and AU, with tax included
+04 – IPP prices in the EU, UK, and AU, with tax included</p>
+
+<p>Remember: Publishers must submit prices that correspond with their territory and contract type. 
+Best Practices
+Use periods or commas to indicate decimals but DO NOT use both. 
+Use whole numbers for Japanese yen (JPY) prices and Mexican pesos (MXN) — no decimals, please! 
+Free books can be submitted as 0.00 or 0. 
+Avoid sending 0.01 prices or no prices or your metadata update will fail. 
+Reminders for Excel Publishers
+Format prices as Numbers (not ‘General’).
+Do not include currency symbols (e.g. $).
+Use upper-case letters for currency codes.
+Examples of Correct Usage 
+Excel
+Note: Excel publishers do not need to specify price type codes. Publishers populate the price and currency fields, and Kobo will automatically use the correct code. </p>
+
+<p>Price: 7.99 
+Currency: CAD
+ONIX 2.1
+ 
+04
+3.99
+    EUR
+<br>
+ONIX 3.0
+ 
+01
+    3.99
+USD
+    </p>
+
+<p>Sales Rights</p>
+
+<p>The Sales Rights  composite is one of the most important ONIX fields in the metadata and should be carefully completed to respect publishing rights. The Sales Rights composite is a group of tags that specify the territorial sales rights chosen by the publisher for a given book, at a global product level. Publishers should clearly state the countries in which a product can be sold. You can also exclude specific countries if needed.</p>
+
+<p>Best Practices</p>
+
+<p>·      The Sales Rights composite is a mandatory field in Onix 2.1 and 3.0. If the Sales Rights are missing in the metadata provided, the metadata will fail and not be ingested by our system.</p>
+
+<p>·      Please note that Kobo only supports 3 types of  () values:</p>
+
+<ul>
+<li>01 - for sale (exclusive rights)</li>
+<li>02 - for sale (non-exclusive rights)</li>
+<li>03 - not for sale
+You can consult the following the List 46: Sales rights type code: <a href="http://home.bic-media.com/onix_info/2-1-4/codelists/onix-codelist-46.htm">http://home.bic-media.com/onix_info/2-1-4/codelists/onix-codelist-46.htm</a>
+</li>
+</ul>
+
+<p>·      To indicate sales rights use two-letter territory codes to specify where your ebook can be sold according to the rights your company holds.  is important in indicating specific type of rights held (exclusive, non-exclusive, not for sale, etc). Please see correct usage for how to declare sales rights in ONIX:</p>
+
+<p>o   ONIX 2.1: Please use upper-case characters and separate each territory with a space in US CA. 
+World Rights should be indicated as WORLD
+<a href="https://www.medra.org/stdoc/onix-codelist-91.htm">https://www.medra.org/stdoc/onix-codelist-91.htm</a></p>
+
+<p>o   ONIX 3.0: Similarly, in  please use upper-case characters and separate each territory with a space. World rights should be indicated as WORLD
+<a href="https://www.medra.org/stdoc/onix-codelist-91.htm">https://www.medra.org/stdoc/onix-codelist-91.htm</a></p>
+
+<p>Excel (column V Excel template): Leave this field blank if you have world rights. If your eBook can only be sold in a specific list of countries, you must indicate their two-letter country codes in this field with each country code separated by a comma. For example: CA, US, GB</p>
+
+<p>ONIX 2.1:</p>
+
+<p>Reference name:
+ 
+ 01
+ FR DE IT NL US CA GB
+ </p>
+
+<p>Short tag:
+
+01
+ FR DE IT NL US CA GB
+</p>
+
+<p>Note: In  ONIX 2.1 you can use the tag:
+WORLD, short tag: WORLD or the ROW value, if the book has WORLD Sales Rights. See the code list: List 49: Region code : <a href="http://home.bic-media.com/onix_info/2-1-4/codelists/onix-codelist-49.htm">http://home.bic-media.com/onix_info/2-1-4/codelists/onix-codelist-49.htm</a></p>
+
+<p>ONIX 3.0:</p>
+
+<p>Reference name:
+
+01
+
+FR DE IT NL US CA GB
+
+</p>
+
+<p>Note: In ONIX 3.0 you can use the tag: WORLD  short tag WORLD identifying regions included in the territory. A region is an area that is not a country, but that is precisely defined in geographical terms. See the code list: List 49: Region code: <a href="http://home.bic-media.com/onix_info/2-1-4/codelists/onix-codelist-49.htm">http://home.bic-media.com/onix_info/2-1-4/codelists/onix-codelist-49.htm</a>
+The ROW code used for  in ONIX 2.1 has been replaced by the  tag in ONIX 3.0 that is placed at the end of the  composite.</p>
+
+<p>Short tag:
+
+01
+
+FR DE IT NL US CA GB
+
+</p>
+
+<p>Related Product</p>
+
+<p>Related Product links a product’s eISBN to its related product identifiers, such as its print ISBN. We strongly recommend sending Related Product information. While Kobo itself does not use the  composite in our store, many of our partners who sell physical books use it to link the ebook and print product pages, which increases potential for discoverability and sales. </p>
+
+<p>For publishers sending Excel metadata, Related ISBN details are conveyed in the “Related ISBN” field. While optional, supplying this information is strongly recommended. Only one related ISBN is allowed per ebook. The Related ISBN must be exactly 13 digits with no spaces in order for our system to process it successfully. </p>
+
+<p>In ONIX 2.1 and 3.0, multiple Related Products are permitted, as long as the corresponding ISBNs are different in each Related Product composite.</p>
+
+<p>ONIX 2.1  Composites</p>
+
+<p>Reference Name:
+
+13
+
+15
+9782246731412
+
+BA
+</p>
+
+<p>Short Tag:
+
+13
+
+15
+9783540261698
+
+BA
+</p>
+
+<p>ONIX 3.0 Composites
+Reference name:
+
+13
+
+15
+9782246731412
+
+BA
+</p>
+
+<p>Short tag:
+
+13
+
+15
+9783540261698
+
+BA
+</p>
+
+<p>RelationCode and ProductRelationCode 13 equals ePublication based on (print product)
+ProductIDType 15 equals ISBN-13
+ProductForm BA equals Book</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
